@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>WebAval</title>
+	<link href="estilo.css" rel="stylesheet" type="text/css" />
+</h:head>
+
+<body>
+	<ui:debug hotkey="x"
+		rendered="#{initParam['javax.faces.FACELETS_DEVELOPMENT']}" />
+
+	<div id="box">
+		<div id="header">
+			<ui:insert name="header">
+<!-- 				<h:graphicImage id="image" alt="logo" url="images/seed-logo.jpg" /> -->
+<!-- 				<div id="sessao"> -->
+<!-- 					<h:form> -->
+<!-- 						<h:outputText id="usuario" value="#{pessoamb.pessoa.usuario}" style="float: left;" /> -->
+	
+<!-- 						<h:commandButton value="sair" action="#" /> -->
+<!-- 					</h:form> -->
+<!-- 				</div> -->
+			</ui:insert>
+		</div>
+
+		<div id="menu">
+			<ui:insert name="menu">
+
+<!-- 				<h:form id="Form_menu"> -->
+<!-- 					<p:menubar> -->
+<!-- 							<p:menuitem value="Home" action="#{pessoamb.autenticar}" /> -->
+<!-- 						<p:submenu label="Cadastros"> -->
+<!-- 							<p:submenu label="Cliente"> -->
+<!-- 								<p:menuitem value="Inclusão" action="#{clientemb.novo}"  /> -->
+<!-- 								<p:menuitem value="Administração" action="#{clientemb.adm}"  /> -->
+<!-- 							</p:submenu> -->
+<!-- 							<p:submenu label="Produto"> -->
+<!-- 								<p:menuitem value="Inclusão" action="#{produtomb.novo}"  /> -->
+<!-- 								<p:menuitem value="Administração" action="#{produtomb.adm}"  /> -->
+<!-- 							</p:submenu> -->
+<!-- 						</p:submenu> -->
+<!-- 						<p:submenu label="Movimentos"> -->
+<!-- 							<p:menuitem value="Venda" action="#" /> -->
+<!-- 						</p:submenu> -->
+<!-- 						<p:submenu label="Relatorios"> -->
+<!-- 							<p:menuitem value="Vendas por período" action="#" /> -->
+<!-- 						</p:submenu> -->
+<!-- 						<f:facet name="options"> -->
+<!-- 						    <h:outputText id="usuario" value="#{pessoamb.pessoa.usuario} "/> -->
+						    
+<!--             				<p:commandButton type="submit" action="#{pessoamb.logoff}" value="Sair" icon="ui-icon-extlink"  /> -->
+<!--         				</f:facet> -->
+						
+<!-- 					</p:menubar> -->
+<!-- 				</h:form> -->
+
+
+			</ui:insert>
+		</div>
+
+		<div id="content">
+			<ui:insert name="content">
+    	    	AREA DO CONTEUDO!!!!
+		
+			</ui:insert>
+		</div>
+
+		<div id="footer">
+			<ui:insert name="footer">
+		    	AREA DO RODAPÉ!!!!
+			</ui:insert>
+		</div>
+
+	</div>
+</body>
+
+</html>
