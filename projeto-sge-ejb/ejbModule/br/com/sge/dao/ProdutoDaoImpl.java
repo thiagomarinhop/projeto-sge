@@ -1,7 +1,5 @@
 package br.com.sge.dao;
 
-import java.util.List;
-
 import javax.ejb.Stateless;
 
 import br.com.sge.domain.Produto;
@@ -24,7 +22,7 @@ public class ProdutoDaoImpl extends AbstractDao<Produto> implements ProdutoDao {
 	public Integer sequencial() {
 		// TODO Auto-generated method stub
 		Integer seq = (Integer) em.createNamedQuery("Produto.sequencial").getSingleResult();
-		return null;
+		return seq;
 	}
 
 	

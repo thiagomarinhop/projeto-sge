@@ -6,12 +6,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaQuery;
 
-import br.com.sge.domain.Produto;
-
 
 public class AbstractDao<T> {
 	
-	@PersistenceContext(unitName="")	
+	@PersistenceContext(unitName="projeto-sge-ejb-pu")	
 	protected EntityManager em;
 	
 	private Class<T> entityClass;
