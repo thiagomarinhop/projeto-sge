@@ -2,10 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"> 
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
 
 <h:head></h:head> 
 <h:body> 
-   <h1>oi</h1>
+   <h:form>
+   	<p:growl ></p:growl>
+   	<p:panel >
+	   	<p:outputLabel value="Descricao" for="descricao"/>
+	   	<p:inputText id="descricao" value="#{produtomb.produto.descricao}" label="Descricao"/>
+	   	
+	   	<p:commandButton value="Salvar" action="#{produtomb.salvar}"/>   	
+   	</p:panel>
+   </h:form>
 </h:body> 
 </html>

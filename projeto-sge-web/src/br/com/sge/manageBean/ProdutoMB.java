@@ -9,7 +9,7 @@ import javax.faces.bean.RequestScoped;
 import br.com.sge.dao.ProdutoDao;
 import br.com.sge.domain.Produto;
 
-@ManagedBean
+@ManagedBean(name="produtomb")
 @RequestScoped
 public class ProdutoMB {
 	
@@ -52,5 +52,10 @@ public class ProdutoMB {
 		produto.setIdproduto(pdao.sequencial());
 		return "cad_produto";
 	}		
+	
+	public void salvar() {
+		pdao.inserir(produto);
+//		return "sucesso";
+	}
 
 }

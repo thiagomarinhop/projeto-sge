@@ -21,7 +21,7 @@ public class Produto {
 		this.idproduto = idproduto;
 	}
 	
-	@Column
+	@Column(name="nome")
 	public String getDescricao() {
 		return descricao;
 	}
