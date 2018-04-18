@@ -8,7 +8,7 @@
 
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>WebAval</title>
+	<title><ui:insert name="title">WebAval</ui:insert></title>
 	<link href="estilo.css" rel="stylesheet" type="text/css" />
 </h:head>
 
@@ -19,6 +19,7 @@
 	<div id="box">
 		<div id="header">
 			<ui:insert name="header">
+			<h1>Cabeçalho</h1>
 <!-- 				<h:graphicImage id="image" alt="logo" url="images/seed-logo.jpg" /> -->
 <!-- 				<div id="sessao"> -->
 <!-- 					<h:form> -->
@@ -32,34 +33,23 @@
 
 		<div id="menu">
 			<ui:insert name="menu">
+			MENU
 
-<!-- 				<h:form id="Form_menu"> -->
-<!-- 					<p:menubar> -->
-<!-- 							<p:menuitem value="Home" action="#{pessoamb.autenticar}" /> -->
-<!-- 						<p:submenu label="Cadastros"> -->
-<!-- 							<p:submenu label="Cliente"> -->
-<!-- 								<p:menuitem value="Inclusão" action="#{clientemb.novo}"  /> -->
-<!-- 								<p:menuitem value="Administração" action="#{clientemb.adm}"  /> -->
-<!-- 							</p:submenu> -->
-<!-- 							<p:submenu label="Produto"> -->
-<!-- 								<p:menuitem value="Inclusão" action="#{produtomb.novo}"  /> -->
-<!-- 								<p:menuitem value="Administração" action="#{produtomb.adm}"  /> -->
-<!-- 							</p:submenu> -->
-<!-- 						</p:submenu> -->
-<!-- 						<p:submenu label="Movimentos"> -->
-<!-- 							<p:menuitem value="Venda" action="#" /> -->
-<!-- 						</p:submenu> -->
-<!-- 						<p:submenu label="Relatorios"> -->
-<!-- 							<p:menuitem value="Vendas por período" action="#" /> -->
-<!-- 						</p:submenu> -->
+				<h:form id="Form_menu">
+					<p:menubar>
+
+								<p:submenu label="Produto">
+									<p:menuitem value="Inclusão" action="#{produtomb.novo}"  />
+								</p:submenu>
+
 <!-- 						<f:facet name="options"> -->
 <!-- 						    <h:outputText id="usuario" value="#{pessoamb.pessoa.usuario} "/> -->
 						    
 <!--             				<p:commandButton type="submit" action="#{pessoamb.logoff}" value="Sair" icon="ui-icon-extlink"  /> -->
 <!--         				</f:facet> -->
 						
-<!-- 					</p:menubar> -->
-<!-- 				</h:form> -->
+					</p:menubar>
+				</h:form>
 
 
 			</ui:insert>
@@ -74,7 +64,7 @@
 
 		<div id="footer">
 			<ui:insert name="footer">
-		    	AREA DO RODAPÉ!!!!
+		    	@Copyright TCHL - Em desenvolvimento
 			</ui:insert>
 		</div>
 

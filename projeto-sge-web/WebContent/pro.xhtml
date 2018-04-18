@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	
+	<ui:composition template="/WEB-INF/Templates/template.xhtml">
+			<ui:define name="title">Cadastro de Produto</ui:define>
+			<ui:define name="menu">
+			</ui:define>
+			<ui:define name="header">				
+            </ui:define>
+			<ui:define name="content">
+				<h:form id="Form">
+					<p:growl id="growl" showDetail="true" />
+				   	<p:panel header="Cadastro de Produto" style="width: 30%;font-size: 10pt; font-family: 'Annie Use Your Telescope';" >
+				   		<h:panelGrid columns="2">
+				   			
+						   	<h:outputLabel value="Id" for="id"/>
+						   	<p:inputText id="id" value="#{produtomb.produto.idproduto}" label="Id" disabled="true" rendered="true"/>
+				   			
+						   	<h:outputLabel value="Descricao" for="descricao"/>
+						   	<p:inputText id="descricao" value="#{produtomb.produto.descricao}" label="Descricao" rendered="true"/>
+						   	
+						   	<f:facet name="footer">
+								<p:commandButton value="Confirmar" action="#{produtomb.salvar()}" update="growl" rendered="true"
+								 />
+							</f:facet>		
+						   	
+					   	</h:panelGrid>   	
+				   	</p:panel>
+				</h:form>
+				<div id="o">
+					<h:form id="sform">
+						<p:dataTable var="prod" value="#{produtomb.produtos}" paginator="true" rows="15" rowKey="#{prod.idproduto}"
+                 		selection="#{produtomb.produtoSelected}" selectionMode="single">
+							<p:column headerText="Id">
+								<h:outputText value="#{prod.idproduto}"/>
+							</p:column>
+							<p:column headerText="Descricao">
+								<h:outputText value="#{prod.descricao}"/>
+							</p:column>
+						</p:dataTable>
+					
+		
+		
+<!-- 						<p:contextMenu for="prod"> -->
+<!-- 				        <p:menuitem value="Visualizar" update="prodDetail" icon="ui-icon-search" oncomplete="PF('prodDialog').show()"/> -->
+				        
+<!-- 				        </p:contextMenu> -->
+				 
+<!-- 					    <p:dialog header="Produto Info" widgetVar="prodDialog" modal="true" showEffect="fade" hideEffect="fade" resizable="false"> -->
+<!-- 					        <p:outputPanel id="prodDetail" style="text-align:center;"> -->
+<!-- 					            <p:panelGrid  columns="2" rendered="#{not empty produtomb.produtoSelected}" columnClasses="label,value"> -->
+					                 
+<!-- 					                <h:outputText value="Id:" /> -->
+<!-- 					                <h:outputText value="#{produtomb.produtoSelected.idproduto}" /> -->
+					 
+<!-- 					                <h:outputText value="Descricao" /> -->
+<!-- 					                <h:outputText value="#{produtomb.produtoSelected.descricao}" /> -->
+					 
+<!-- 					            </p:panelGrid> -->
+<!-- 					        </p:outputPanel> -->
+<!-- 					    </p:dialog>		 -->
+					</h:form>
+				</div>
+			</ui:define>
+	</ui:composition>
+
+</html>

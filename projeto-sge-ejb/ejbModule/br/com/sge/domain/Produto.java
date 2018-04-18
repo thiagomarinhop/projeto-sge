@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 
 @Entity
-@NamedQuery(name="Produto.sequencial", query="select max(p.idproduto)+1 from Produto p")
+@NamedQuery(name="Produto.sequencial", query="select coalesce(max(p.idproduto),0)+1 from Produto p")
 public class Produto {
 	
 	private Integer idproduto;
